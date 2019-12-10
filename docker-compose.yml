@@ -1,0 +1,13 @@
+version: '2.3'
+services: 
+    opencv:
+        container_name: opencv
+        image: opencv_jupyter  
+        volumes: 
+        - .:/share
+        ports: 
+        - 8888:8888
+        tty: true
+        working_dir: /share
+# enter this command after use this
+# docker run -it --rm --gpus all --volumes-from opencv --name ml pytorch_test

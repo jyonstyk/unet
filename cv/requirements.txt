@@ -1,0 +1,9 @@
+matplotlib
+jupyter
+xlrd
+pandas
+imageio
+sklearn
+mlxtend
+pydot
+graphviz
