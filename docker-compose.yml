@@ -9,5 +9,6 @@ services:
         - 8888:8888
         tty: true
         working_dir: /share
+        command: jupyter notebook --ip=0.0.0.0 --allow-root --NotebookApp.token=''
 # enter this command after use this
 # docker run -it --rm --gpus all --volumes-from opencv --name ml pytorch_test
