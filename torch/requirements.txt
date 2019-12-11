@@ -1,0 +1,8 @@
+matplotlib
+jupyter
+xlrd
+pandas
+imageio
+sklearn
+mlxtend
+jupyterlab

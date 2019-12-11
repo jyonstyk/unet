@@ -11,7 +11,13 @@ if you need updating nvidia-docker, read https://github.com/NVIDIA/nvidia-docker
 ## run docker container
 ### opencv
 ```
-docker-compose -f cv/docker-compose.yml up -d -- build
+docker-compose -f cv/docker-compose.yml up -d --build
 ```
-after using these commands, access http://localhost:8888 and then connect notebook server
 
+### pytorch
+```
+docker build -t torch_jupyter torch
+docker run -it --rm -p 8888:8888 -v $PWD:/share --gpus all torch_jupyter
+```
+
+after using these commands, access http://localhost:8888 and then connect notebook server
