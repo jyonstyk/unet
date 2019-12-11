@@ -2,13 +2,15 @@ version: '2.3'
 services: 
     opencv:
         container_name: opencv
-        image: opencv_jupyter  
+        image: opencv_jupyter
+        build:
+            context: ./cv  
         volumes: 
         - .:/share
         ports: 
         - 8888:8888
         tty: true
         working_dir: /share
-        command: jupyter notebook --ip=0.0.0.0 --allow-root --NotebookApp.token=''
+        command: jupyter lab --ip=0.0.0.0 --allow-root --NotebookApp.token=''
 # enter this command after use this
 # docker run -it --rm --gpus all --volumes-from opencv --name ml pytorch_test
